@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BATA sh.p.k – Assemblaggio Cavi Elettrici & Soluzioni Cablaggio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header id="navbar">
+    <div class="nav-container">
+
+      <!-- BRAND (text only, no image) -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bata">BATA</span><span class="logo-shpk">sh.p.k</span>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home"        data-i18n="navHome">Home</a></li>
+          <li><a href="#about"       data-i18n="navAbout">Chi Siamo</a></li>
+          <li><a href="#services"    data-i18n="navServices">Servizi</a></li>
+          <li><a href="#experience"  data-i18n="navExperience">Esperienza</a></li>
+          <li><a href="#philosophy"  data-i18n="navPhilosophy">Filosofia</a></li>
+          <li><a href="#contact"     data-i18n="navContact">Contatti</a></li>
+        </ul>
+      </nav>
+
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="sq">AL</button>
+      </div>
+
+      <!-- HAMBURGER -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home"       class="mobile-link" data-i18n="navHome">Home</a></li>
+        <li><a href="#about"      class="mobile-link" data-i18n="navAbout">Chi Siamo</a></li>
+        <li><a href="#services"   class="mobile-link" data-i18n="navServices">Servizi</a></li>
+        <li><a href="#experience" class="mobile-link" data-i18n="navExperience">Esperienza</a></li>
+        <li><a href="#philosophy" class="mobile-link" data-i18n="navPhilosophy">Filosofia</a></li>
+        <li><a href="#contact"    class="mobile-link" data-i18n="navContact">Contatti</a></li>
+      </ul>
+      <div class="mobile-lang">
+        <button class="lang-btn active" data-lang="it">🇮🇹 Italiano</button>
+        <button class="lang-btn" data-lang="en">🇬🇧 English</button>
+        <button class="lang-btn" data-lang="sq">🇦🇱 Shqip</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <div class="hero-image-placeholder">
+      <span class="placeholder-label">📷 Industrial / Cable Photo</span>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="heroEyebrow">Dal 1996</p>
+      <h1 class="hero-title">BATA <span class="hero-shpk">sh.p.k</span></h1>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">Assemblaggio Cavi Elettrici & Soluzioni Cablaggio</p>
+      <p class="hero-tagline" data-i18n="heroTagline">Assemblaggio professionale di cavi elettrici per partner europei.</p>
+      <a href="#about" class="btn btn-gold" data-i18n="heroCTA">Scopri di più</a>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="about section-light">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-tag" data-i18n="aboutTag">Chi Siamo</span>
+          <h2 class="section-title dark" data-i18n="aboutTitle">About BATA</h2>
+          <p data-i18n="aboutP1">BATA opera dal 1996 con aziende del mercato dell'Unione Europea. L'azienda rappresenta professionalità, dinamismo e impegno nel soddisfare le esigenze dei clienti.</p>
+          <p data-i18n="aboutP2">Oggi l'azienda dispone di uno staff professionale che lavora con principi di correttezza, giustizia e qualità.</p>
+          <div class="value-cards">
+            <div class="value-card">
+              <div class="value-icon">✔</div>
+              <div>
+                <strong data-i18n="value1Title">Professionalità</strong>
+                <p data-i18n="value1Desc">Standard elevati e team qualificato.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">✔</div>
+              <div>
+                <strong data-i18n="value2Title">Dinamismo</strong>
+                <p data-i18n="value2Desc">Rapido adattamento alle esigenze del mercato.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">✔</div>
+              <div>
+                <strong data-i18n="value3Title">Determinazione</strong>
+                <p data-i18n="value3Desc">Risposta precisa alle richieste del cliente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="img-placeholder">
+            <span class="placeholder-label">📷 Factory / Staff Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="services section-dark">
+    <div class="container">
+      <span class="section-tag gold" data-i18n="servicesTag">Cosa Facciamo</span>
+      <h2 class="section-title light" data-i18n-html="servicesTitle">Esperti in Assemblaggio<br/>Cavi Elettrici</h2>
+      <p class="section-intro" data-i18n="servicesIntro">
+        Dal 2019, BATA è specializzata nel montaggio e collegamento di cavi elettrici per elettrodomestici e industria. Lavoriamo con tutti i tipi di cavi, dai più complessi ai più semplici.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3 data-i18n="service1Title">Assemblaggio Cavi</h3>
+          <p data-i18n="service1Desc">Montaggio professionale, connessioni precise e installazione affidabile.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3 data-i18n="service2Title">Soluzioni Cablaggio</h3>
+          <p data-i18n="service2Desc">Soluzioni di cablaggio per produzione, costruzione e connessione industriale.</p>
+        </div>
+        <div class="service-card service-card-image">
+          <div class="img-placeholder dark-placeholder">
+            <span class="placeholder-label">📷 Industrial Production Photo</span>
+          </div>
+          <div class="service-card-overlay">
+            <div class="service-icon">🏭</div>
+            <h3 data-i18n="service3Title">Produzione Industriale</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="experience section-dark-alt">
+    <div class="container">
+      <span class="section-tag gold" data-i18n="expTag">Il Nostro Percorso</span>
+      <h2 class="section-title light" data-i18n-html="expTitle">Esperienza &amp; Collaborazione<br/>Internazionale</h2>
+      <p class="section-intro" data-i18n="expIntro">
+        BATA è costruita su anni di lavoro ed esperienza, rafforzata dalla collaborazione con aziende italiane ed europee nel settore degli impianti elettrici.
+      </p>
+      <div class="experience-grid">
+        <div class="exp-image">
+          <div class="img-placeholder">
+            <span class="placeholder-label">📷 Workshop / Team Photo</span>
+          </div>
+        </div>
+        <div class="exp-bullets">
+          <div class="exp-item">
+            <div class="exp-bullet-icon">💡</div>
+            <div>
+              <strong data-i18n="exp1Title">30+ Anni di Esperienza</strong>
+              <p data-i18n="exp1Desc">Fondata nel 1996, BATA ha accumulato profonde conoscenze nel settore elettrico.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-bullet-icon">🌍</div>
+            <div>
+              <strong data-i18n="exp2Title">Partner nel Mercato Europeo</strong>
+              <p data-i18n="exp2Desc">Stretta collaborazione con aziende italiane ed europee sin dai primi anni.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-bullet-icon">⚙️</div>
+            <div>
+              <strong data-i18n="exp3Title">Specializzati dal 2019</strong>
+              <p data-i18n="exp3Desc">Specializzazione profonda nel montaggio di cavi elettrici per industria e uso domestico.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-bullet-icon">🛡️</div>
+            <div>
+              <strong data-i18n="exp4Title">Garanzia di Qualità</strong>
+              <p data-i18n="exp4Desc">Ogni prodotto controllato secondo gli standard europei di qualità.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="stat">
+          <span class="stat-number">1996</span>
+          <span class="stat-label" data-i18n="statFounded">Fondazione</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">30<span class="stat-plus">+</span></span>
+          <span class="stat-label" data-i18n="statYears">Anni Attivi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">EU</span>
+          <span class="stat-label" data-i18n="statMarket">Mercato EU</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">100<span class="stat-plus">+</span></span>
+          <span class="stat-label" data-i18n="statWorkers">Lavoratori</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PHILOSOPHY ========== -->
+  <section id="philosophy" class="philosophy section-light">
+    <div class="container philosophy-container">
+      <span class="section-tag" data-i18n="philTag">I Nostri Valori</span>
+      <h2 class="section-title dark" data-i18n="philTitle">La Nostra Filosofia</h2>
+      <p class="section-intro dark-text" data-i18n="philIntro">
+        Crediamo nel lavoro reale e pratico, non solo teoria. L'esperienza si acquisisce sul campo e le sfide sono parte del nostro sviluppo quotidiano.
+      </p>
+      <div class="philosophy-grid">
+        <div class="phil-card">
+          <div class="phil-number">01</div>
+          <div class="phil-icon">💡</div>
+          <h3 data-i18n="phil1Title">Lavoro Reale &amp; Pratico</h3>
+          <p data-i18n="phil1Desc">Crediamo nel lavoro reale e pratico, non solo teoria.</p>
+        </div>
+        <div class="phil-card">
+          <div class="phil-number">02</div>
+          <div class="phil-icon">⚙️</div>
+          <h3 data-i18n="phil2Title">Esperienza sul Campo</h3>
+          <p data-i18n="phil2Desc">L'esperienza si acquisisce sul campo — le sfide sono parte della nostra crescita.</p>
+        </div>
+        <div class="phil-card">
+          <div class="phil-number">03</div>
+          <div class="phil-icon">🛡️</div>
+          <h3 data-i18n="phil3Title">Integrità &amp; Qualità</h3>
+          <p data-i18n="phil3Desc">Correttezza, giustizia e qualità come base di ogni nostra decisione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INNOVATION ========== -->
+  <section class="innovation section-navy">
+    <div class="container innovation-container">
+      <div class="innovation-text">
+        <span class="section-tag gold" data-i18n="innoTag">Il Nostro Approccio</span>
+        <h2 class="section-title light" data-i18n-html="innoTitle">Innovazione &amp;<br/>Affidabilità</h2>
+        <p data-i18n="innoDesc">Per noi l'innovazione significa affidabilità, sostenibilità e soluzioni pratiche per i clienti. Non seguiamo le mode — costruiamo soluzioni durature e affidabili.</p>
+        <div class="innovation-features">
+          <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat1">Soluzioni affidabili a lungo termine</span></div>
+          <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat2">Tecnologie collaudate sul campo</span></div>
+          <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat3">Standard europei di produzione</span></div>
+        </div>
+      </div>
+      <div class="innovation-image">
+        <div class="img-placeholder dark-placeholder">
+          <span class="placeholder-label">📷 Innovation / Tech Photo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="contact section-light">
+    <div class="container">
+      <span class="section-tag" data-i18n="contactTag">Contattaci</span>
+      <h2 class="section-title dark" data-i18n-html="contactTitle">Contatta <span class="gold-text">BATA</span></h2>
+      <p class="section-intro dark-text" data-i18n="contactIntro">
+        Siamo aperti alla collaborazione. Contattateci per qualsiasi esigenza o partnership.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong data-i18n="contactLocationLabel">Sede</strong>
+              <p>Albania</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong data-i18n="contactPhoneLabel">Telefono</strong>
+              <p>+355 XX XXX XXXX</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong data-i18n="contactEmailLabel">Email</strong>
+              <p>labeatb@yahoo.it</p>
+            </div>
+          </div>
+          <a href="mailto:labeatb@yahoo.it" class="btn btn-gold btn-large" data-i18n="contactCTA">
+            Richiedi Partnership
+          </a>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" data-i18n="formNameLabel">Nome Completo</label>
+              <input type="text" id="name" name="name" data-i18n-placeholder="formNamePlaceholder" placeholder="Il tuo nome" required/>
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="formEmailLabel">Indirizzo Email</label>
+              <input type="email" id="email" name="email" data-i18n-placeholder="formEmailPlaceholder" placeholder="tua@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="company" data-i18n="formCompanyLabel">Azienda</label>
+              <input type="text" id="company" name="company" data-i18n-placeholder="formCompanyPlaceholder" placeholder="La tua azienda"/>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="formMessageLabel">Messaggio</label>
+              <textarea id="message" name="message" rows="4" data-i18n-placeholder="formMessagePlaceholder" placeholder="Raccontaci del tuo progetto..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-navy btn-full" data-i18n="formSubmit">Invia Messaggio</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GOOGLE MAPS ========== -->
+  <section id="map" class="map-section section-navy">
+    <div class="container map-header">
+      <span class="section-tag gold" data-i18n="mapTag">Dove Siamo</span>
+      <h2 class="section-title light" data-i18n="mapTitle">Trovaci</h2>
+    </div>
+    <div class="map-embed-wrapper">
+      <!--
+        ┌─────────────────────────────────────────────────────────┐
+        │  COME INSERIRE LA MAPPA / HOW TO INSERT THE MAP         │
+        │  1. Vai su Google Maps e cerca la tua posizione         │
+        │  2. Clicca "Condividi" → "Incorpora una mappa"          │
+        │  3. Copia l'URL dal tag src="..."                       │
+        │  4. Incollalo nell'attributo data-map-src qui sotto     │
+        └─────────────────────────────────────────────────────────┘
+      -->
+      <iframe
+        data-map-src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1122.2517498487814!2d19.523115121493717!3d42.06790025288928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDA0JzA0LjMiTiAxOcKwMzEnMjUuMCJF!5e0!3m2!1sen!2s!4v1773326570304!5m2!1sen!2s"
+        src="about:blank"
+        class="map-iframe"
+        width="100%"
+        height="480"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="BATA Location">
+      </iframe>
+      <div class="map-placeholder-overlay" id="mapOverlay">
+        <div class="map-ph-content">
+          <div class="map-ph-icon">📍</div>
+          <h3>Google Maps</h3>
+          <p data-i18n="mapPlaceholderText">Inserisci il link della mappa nel codice HTML</p>
+          <div class="map-code-hint">
+            <code>data-map-src="IL_TUO_LINK_GOOGLE_MAPS"</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <span class="logo-bata">BATA</span><span class="logo-shpk">sh.p.k</span>
+        </div>
+        <p data-i18n-html="footerTagline">Assemblaggio Cavi Elettrici &amp; Soluzioni Cablaggio<br/>Dal 1996</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#home"       data-i18n="navHome">Home</a></li>
+          <li><a href="#about"      data-i18n="navAbout">Chi Siamo</a></li>
+          <li><a href="#services"   data-i18n="navServices">Servizi</a></li>
+          <li><a href="#experience" data-i18n="navExperience">Esperienza</a></li>
+          <li><a href="#philosophy" data-i18n="navPhilosophy">Filosofia</a></li>
+          <li><a href="#contact"    data-i18n="navContact">Contatti</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footerCopyright">© 2026 BATA sh.p.k. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
