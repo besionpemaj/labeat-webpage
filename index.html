@@ -433,7 +433,17 @@
         </div>
 
         <div class="contact-form">
-          <form id="contactForm">
+          <form id="contactForm"
+            action="https://formsubmit.co/labeatb@yahoo.it"
+            method="POST">
+            <!-- FormSubmit: subject, template, optional captcha off for smoother UX -->
+            <input type="hidden" name="_subject" value="BATA sh.p.k — website contact"/>
+            <input type="hidden" name="_template" value="table"/>
+            <input type="hidden" name="_captcha" value="false"/>
+            <p class="form-honeypot" aria-hidden="true">
+              <label for="contactWebsite">Website</label>
+              <input type="text" id="contactWebsite" name="_honey" tabindex="-1" autocomplete="off"/>
+            </p>
             <div class="form-group">
               <label for="name" data-i18n="formNameLabel">Nome Completo</label>
               <input type="text" id="name" name="name" data-i18n-placeholder="formNamePlaceholder" placeholder="Il tuo nome" required/>

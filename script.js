@@ -97,6 +97,7 @@ const translations = {
     formSubmit:  'Invia Messaggio',
     formSending: 'Invio in corso…',
     formSent:    '✓ Messaggio Inviato!',
+    formError:   'Invio non riuscito. Riprova o scrivi a labeatb@yahoo.it',
 
     mapTag:             'Dove Siamo',
     mapTitle:           'Trovaci',
@@ -196,6 +197,7 @@ const translations = {
     formSubmit:  'Send Message',
     formSending: 'Sending…',
     formSent:    '✓ Message Sent!',
+    formError:   'Could not send. Try again or email labeatb@yahoo.it',
 
     mapTag:             'Find Us',
     mapTitle:           'Our Location',
@@ -295,6 +297,7 @@ const translations = {
     formSubmit:  'Dërgo Mesazhin',
     formSending: 'Duke dërguar…',
     formSent:    '✓ Mesazhi u Dërgua!',
+    formError:   'Dështoi dërgimi. Provo përsëri ose shkruaj te labeatb@yahoo.it',
 
     mapTag:             'Na Gjeni',
     mapTitle:           'Vendndodhja Jonë',
@@ -537,27 +540,60 @@ const revealObserver = new IntersectionObserver(
 /* ============================================================
    CONTACT FORM
    ============================================================ */
+const FORM_SUBMIT_AJAX = 'https://formsubmit.co/ajax/labeatb@yahoo.it';
+
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    if (!form.reportValidity()) return;
+
     const btn = form.querySelector('button[type="submit"]');
     const t   = translations[currentLang];
+    const submitLabel = t.formSubmit || 'Send';
 
     btn.textContent = t.formSending;
     btn.disabled    = true;
 
-    /* Simulate async send — replace with real fetch/API */
-    setTimeout(() => {
-      btn.textContent    = t.formSent;
-      btn.style.background = '#2e7d32';
-      form.reset();
+    /* Build a plain object from the form so we can POST JSON — required
+       by FormSubmit's AJAX endpoint (FormData + JSON Accept triggers preflight) */
+    const fd  = new FormData(form);
+    const obj = {};
+    fd.forEach((v, k) => { obj[k] = v; });
+
+    try {
+      const res  = await fetch(FORM_SUBMIT_AJAX, {
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept':        'application/json',
+        },
+      });
+      const data = await res.json().catch(() => ({}));
+      const ok   = res.ok && (data.success === true || data.success === 'true');
+
+      if (ok) {
+        btn.textContent      = t.formSent;
+        btn.style.background = '#2e7d32';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent      = submitLabel;
+          btn.style.background = '';
+          btn.disabled         = false;
+        }, 3500);
+      } else {
+        throw new Error(data.message || 'FormSubmit error');
+      }
+    } catch {
+      btn.textContent = t.formError || 'Error';
+      btn.style.background = '#c62828';
       setTimeout(() => {
-        btn.textContent    = t.formSubmit;
+        btn.textContent      = submitLabel;
         btn.style.background = '';
-        btn.disabled       = false;
-      }, 3000);
-    }, 1400);
+        btn.disabled         = false;
+      }, 5000);
+    }
   });
 }
 
