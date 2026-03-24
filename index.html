@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BATA sh.p.k – Assemblaggio Cavi Elettrici & Soluzioni Cablaggio</title>
-  <!-- Favicon: vedi tabella commenti sotto <body> — file atteso: Images/favicon.png -->
   <link rel="icon" href="Images/favicon.png" type="image/png" sizes="32x32"/>
   <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" sizes="180x180"/>
   <link rel="stylesheet" href="style.css" />
@@ -15,49 +14,40 @@
 <body>
 
   <!--
-    IMMAGINI / IMAGE FILES (cartella: Images/)
-    Rinomina o copia i tuoi file con questi nomi per farli apparire al posto giusto:
+    ════════════════════════════════════════════════════════
+     IMMAGINI — metti i file nella cartella Images/
+     e rinominali esattamente come indicato.
+    ════════════════════════════════════════════════════════
 
-    | Posizione sulla pagina      | Nome file da usare              |
-    |-----------------------------|----------------------------------|
-    | Sfondo hero (full screen)   | Images/hero-background.jpg      |
-    | Sezione Chi Siamo (destra)  | Images/about.jpg                |
-    | Card Servizi (immagine)     | Images/services-industrial.jpg   |
-    | Esperienza — griglia 2×2, slot 1 (alto sx)  | Images/experience-1.jpg |
-    | Esperienza — slot 2 (alto dx)               | Images/experience-2.jpg |
-    | Esperienza — slot 3 (basso sx)              | Images/experience-3.jpg |
-    | Esperienza — slot 4 (basso dx)             | Images/experience-4.jpg |
-    | Sezione Innovazione (destra)| Images/innovation.jpg           |
+    | Sezione                        | Nome file                      |
+    |--------------------------------|--------------------------------|
+    | Sfondo hero (full screen)      | Images/hero-background.jpg     |
+    | Chi Siamo — galleria (5 foto)  | Images/about-1.jpg … about-5.jpg |
+    | Esperienza — galleria (5 foto) | Images/experience-1.jpg … experience-5.jpg |
+    | Favicon scheda browser         | Images/favicon.png             |  32×32 px
+    | Icona iOS (opzionale)          | Images/apple-touch-icon.png    |  180×180 px
 
-    | Favicon (scheda browser)    | Images/favicon.png              |  (32×32 o 48×48 px, PNG)
-    | Icona iOS “Aggiungi a Home” | Images/apple-touch-icon.png    |  (180×180 px, opzionale)
-
-    Formati: .jpg, .jpeg o .png — se usi un’estensione diversa, cambia anche l’attributo src nel HTML.
-    Per il favicon: se usi solo .ico, imposta href="Images/favicon.ico" e type="image/x-icon" nel <head>.
+    Formati: .jpg / .jpeg / .png
   -->
 
   <!-- ========== NAVBAR ========== -->
   <header id="navbar">
     <div class="nav-container">
 
-      <!-- BRAND (text only, no image) -->
       <a href="#home" class="nav-logo">
         <span class="logo-bata">BATA</span><span class="logo-shpk">sh.p.k</span>
       </a>
 
-      <!-- DESKTOP NAV -->
       <nav>
         <ul class="nav-links">
           <li><a href="#home"        data-i18n="navHome">Home</a></li>
           <li><a href="#about"       data-i18n="navAbout">Chi Siamo</a></li>
           <li><a href="#services"    data-i18n="navServices">Servizi</a></li>
           <li><a href="#experience"  data-i18n="navExperience">Esperienza</a></li>
-          <li><a href="#philosophy"  data-i18n="navPhilosophy">Filosofia</a></li>
           <li><a href="#contact"     data-i18n="navContact">Contatti</a></li>
         </ul>
       </nav>
 
-      <!-- LANGUAGE SWITCHER -->
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="it">IT</button>
         <span class="lang-sep">|</span>
@@ -66,7 +56,6 @@
         <button class="lang-btn" data-lang="sq">AL</button>
       </div>
 
-      <!-- HAMBURGER -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -79,7 +68,6 @@
         <li><a href="#about"      class="mobile-link" data-i18n="navAbout">Chi Siamo</a></li>
         <li><a href="#services"   class="mobile-link" data-i18n="navServices">Servizi</a></li>
         <li><a href="#experience" class="mobile-link" data-i18n="navExperience">Esperienza</a></li>
-        <li><a href="#philosophy" class="mobile-link" data-i18n="navPhilosophy">Filosofia</a></li>
         <li><a href="#contact"    class="mobile-link" data-i18n="navContact">Contatti</a></li>
       </ul>
       <div class="mobile-lang">
@@ -94,9 +82,8 @@
   <section id="home" class="hero">
     <div class="hero-image-placeholder image-slot">
       <div class="slot-fallback">
-        <span class="placeholder-label">📷 Hero — nome file</span>
+        <span class="placeholder-label">Hero</span>
         <code class="placeholder-filename">Images/hero-background.jpg</code>
-        <span class="placeholder-hint">Sfondo a tutta larghezza sopra il titolo (industria / cavi).</span>
       </div>
       <img class="slot-img" src="Images/hero-background.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
     </div>
@@ -147,13 +134,67 @@
           </div>
         </div>
         <div class="about-image">
-          <div class="img-placeholder image-slot">
-            <div class="slot-fallback">
-              <span class="placeholder-label">📷 Chi Siamo — nome file</span>
-              <code class="placeholder-filename">Images/about.jpg</code>
-              <span class="placeholder-hint">Fabbrica, team o sede accanto al testo About.</span>
+          <div class="exp-gallery" id="aboutGallery" role="region" aria-label="Galleria Chi Siamo" tabindex="0">
+            <div class="exp-gallery-track">
+              <div class="exp-gallery-slide exp-gallery-slide--active">
+                <div class="img-placeholder image-slot">
+                  <div class="slot-fallback">
+                    <span class="placeholder-label">Chi Siamo 1</span>
+                    <code class="placeholder-filename">Images/about-1.jpg</code>
+                  </div>
+                  <img class="slot-img" src="Images/about-1.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
+              <div class="exp-gallery-slide">
+                <div class="img-placeholder image-slot">
+                  <div class="slot-fallback">
+                    <span class="placeholder-label">Chi Siamo 2</span>
+                    <code class="placeholder-filename">Images/about-2.jpg</code>
+                  </div>
+                  <img class="slot-img" src="Images/about-2.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
+              <div class="exp-gallery-slide">
+                <div class="img-placeholder image-slot">
+                  <div class="slot-fallback">
+                    <span class="placeholder-label">Chi Siamo 3</span>
+                    <code class="placeholder-filename">Images/about-3.jpg</code>
+                  </div>
+                  <img class="slot-img" src="Images/about-3.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
+              <div class="exp-gallery-slide">
+                <div class="img-placeholder image-slot">
+                  <div class="slot-fallback">
+                    <span class="placeholder-label">Chi Siamo 4</span>
+                    <code class="placeholder-filename">Images/about-4.jpg</code>
+                  </div>
+                  <img class="slot-img" src="Images/about-4.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
+              <div class="exp-gallery-slide">
+                <div class="img-placeholder image-slot">
+                  <div class="slot-fallback">
+                    <span class="placeholder-label">Chi Siamo 5</span>
+                    <code class="placeholder-filename">Images/about-5.jpg</code>
+                  </div>
+                  <img class="slot-img" src="Images/about-5.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+                </div>
+              </div>
             </div>
-            <img class="slot-img" src="Images/about.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            <button type="button" class="exp-gallery-btn exp-gallery-btn--prev" aria-label="Immagine precedente">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button type="button" class="exp-gallery-btn exp-gallery-btn--next" aria-label="Immagine successiva">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <div class="exp-gallery-dots">
+              <button type="button" class="exp-gallery-dot exp-gallery-dot--active" aria-label="Immagine 1" aria-selected="true"></button>
+              <button type="button" class="exp-gallery-dot" aria-label="Immagine 2" aria-selected="false"></button>
+              <button type="button" class="exp-gallery-dot" aria-label="Immagine 3" aria-selected="false"></button>
+              <button type="button" class="exp-gallery-dot" aria-label="Immagine 4" aria-selected="false"></button>
+              <button type="button" class="exp-gallery-dot" aria-label="Immagine 5" aria-selected="false"></button>
+            </div>
           </div>
         </div>
       </div>
@@ -168,30 +209,40 @@
       <p class="section-intro" data-i18n="servicesIntro">
         Dal 2019, BATA è specializzata nel montaggio e collegamento di cavi elettrici per elettrodomestici e industria. Lavoriamo con tutti i tipi di cavi, dai più complessi ai più semplici.
       </p>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3 data-i18n="service1Title">Assemblaggio Cavi</h3>
-          <p data-i18n="service1Desc">Montaggio professionale, connessioni precise e installazione affidabile.</p>
+      <div class="processes-rows">
+        <div class="processes-row processes-row--3">
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">01</span>
+            <h3 data-i18n="proc1Title">Montaggio e collegamento secondo schemi elettrici</h3>
+            <p data-i18n="proc1Desc">Realizziamo cablaggi seguendo documentazione tecnica, schemi e specifiche del cliente, così ogni connessione corrisponde al progetto approvato.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">02</span>
+            <h3 data-i18n="proc2Title">Fastonature singola, doppia e varianti</h3>
+            <p data-i18n="proc2Desc">Applicazione di terminali faston maschio e femmina, configurazioni singole o doppie e soluzioni equivalenti richieste dalla commessa.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">03</span>
+            <h3 data-i18n="proc3Title">Saldatura</h3>
+            <p data-i18n="proc3Desc">Giunzioni a filo e a stagno su conduttori e componenti, con controlli visivi per solidità meccanica e continuità elettrica.</p>
+          </article>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🔌</div>
-          <h3 data-i18n="service2Title">Soluzioni Cablaggio</h3>
-          <p data-i18n="service2Desc">Soluzioni di cablaggio per produzione, costruzione e connessione industriale.</p>
-        </div>
-        <div class="service-card service-card-image">
-          <div class="img-placeholder dark-placeholder image-slot">
-            <div class="slot-fallback">
-              <span class="placeholder-label">📷 Servizi — nome file</span>
-              <code class="placeholder-filename">Images/services-industrial.jpg</code>
-              <span class="placeholder-hint">Produzione / cablaggio per la card con overlay.</span>
-            </div>
-            <img class="slot-img" src="Images/services-industrial.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
-          </div>
-          <div class="service-card-overlay">
-            <div class="service-icon">🏭</div>
-            <h3 data-i18n="service3Title">Produzione Industriale</h3>
-          </div>
+        <div class="processes-row processes-row--3">
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">04</span>
+            <h3 data-i18n="proc4Title">Twistimi</h3>
+            <p data-i18n="proc4Desc">Formazione di terminali twist per connessioni affidabili su più conduttori, in conformità alle istruzioni di montaggio.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">05</span>
+            <h3 data-i18n="proc5Title">Collaudo e controllo qualità</h3>
+            <p data-i18n="proc5Desc">Verifiche elettriche, prove di continuità e controlli dimensionali prima della spedizione, secondo gli standard concordati.</p>
+          </article>
+          <article class="process-card">
+            <span class="process-index" aria-hidden="true">06</span>
+            <h3 data-i18n="proc6Title">Lavorazioni cavi flat</h3>
+            <p data-i18n="proc6Desc">Taglio, preparazione e completamento di cavi piatti (flat) per display, flat-flex e applicazioni con ingombro ridotto.</p>
+          </article>
         </div>
       </div>
     </div>
@@ -206,48 +257,72 @@
         BATA è costruita su anni di lavoro ed esperienza, rafforzata dalla collaborazione con aziende italiane ed europee nel settore degli impianti elettrici.
       </p>
       <div class="experience-grid">
-        <div class="exp-images" aria-label="Galleria esperienza">
-          <div class="exp-image-slot">
-            <div class="img-placeholder image-slot">
-              <div class="slot-fallback">
-                <span class="placeholder-label">📷 Esperienza 1</span>
-                <code class="placeholder-filename">Images/experience-1.jpg</code>
-                <span class="placeholder-hint">In alto a sinistra.</span>
+
+        <!-- Gallery -->
+        <div class="exp-gallery" id="expGallery" role="region" aria-label="Galleria esperienza" tabindex="0">
+          <div class="exp-gallery-track">
+            <div class="exp-gallery-slide exp-gallery-slide--active">
+              <div class="img-placeholder image-slot">
+                <div class="slot-fallback">
+                  <span class="placeholder-label">Esperienza 1</span>
+                  <code class="placeholder-filename">Images/experience-1.jpg</code>
+                </div>
+                <img class="slot-img" src="Images/experience-1.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
               </div>
-              <img class="slot-img" src="Images/experience-1.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            </div>
+            <div class="exp-gallery-slide">
+              <div class="img-placeholder image-slot">
+                <div class="slot-fallback">
+                  <span class="placeholder-label">Esperienza 2</span>
+                  <code class="placeholder-filename">Images/experience-2.jpg</code>
+                </div>
+                <img class="slot-img" src="Images/experience-2.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+              </div>
+            </div>
+            <div class="exp-gallery-slide">
+              <div class="img-placeholder image-slot">
+                <div class="slot-fallback">
+                  <span class="placeholder-label">Esperienza 3</span>
+                  <code class="placeholder-filename">Images/experience-3.jpg</code>
+                </div>
+                <img class="slot-img" src="Images/experience-3.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+              </div>
+            </div>
+            <div class="exp-gallery-slide">
+              <div class="img-placeholder image-slot">
+                <div class="slot-fallback">
+                  <span class="placeholder-label">Esperienza 4</span>
+                  <code class="placeholder-filename">Images/experience-4.jpg</code>
+                </div>
+                <img class="slot-img" src="Images/experience-4.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+              </div>
+            </div>
+            <div class="exp-gallery-slide">
+              <div class="img-placeholder image-slot">
+                <div class="slot-fallback">
+                  <span class="placeholder-label">Esperienza 5</span>
+                  <code class="placeholder-filename">Images/experience-5.jpg</code>
+                </div>
+                <img class="slot-img" src="Images/experience-5.jpg" alt="" loading="lazy" onerror="this.style.display='none'"/>
+              </div>
             </div>
           </div>
-          <div class="exp-image-slot">
-            <div class="img-placeholder image-slot">
-              <div class="slot-fallback">
-                <span class="placeholder-label">📷 Esperienza 2</span>
-                <code class="placeholder-filename">Images/experience-2.jpg</code>
-                <span class="placeholder-hint">In alto a destra.</span>
-              </div>
-              <img class="slot-img" src="Images/experience-2.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
-            </div>
-          </div>
-          <div class="exp-image-slot">
-            <div class="img-placeholder image-slot">
-              <div class="slot-fallback">
-                <span class="placeholder-label">📷 Esperienza 3</span>
-                <code class="placeholder-filename">Images/experience-3.jpg</code>
-                <span class="placeholder-hint">In basso a sinistra.</span>
-              </div>
-              <img class="slot-img" src="Images/experience-3.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
-            </div>
-          </div>
-          <div class="exp-image-slot">
-            <div class="img-placeholder image-slot">
-              <div class="slot-fallback">
-                <span class="placeholder-label">📷 Esperienza 4</span>
-                <code class="placeholder-filename">Images/experience-4.jpg</code>
-                <span class="placeholder-hint">In basso a destra.</span>
-              </div>
-              <img class="slot-img" src="Images/experience-4.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
-            </div>
+          <button type="button" class="exp-gallery-btn exp-gallery-btn--prev" aria-label="Immagine precedente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button type="button" class="exp-gallery-btn exp-gallery-btn--next" aria-label="Immagine successiva">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="exp-gallery-dots">
+            <button type="button" class="exp-gallery-dot exp-gallery-dot--active" aria-label="Immagine 1" aria-selected="true"></button>
+            <button type="button" class="exp-gallery-dot" aria-label="Immagine 2" aria-selected="false"></button>
+            <button type="button" class="exp-gallery-dot" aria-label="Immagine 3" aria-selected="false"></button>
+            <button type="button" class="exp-gallery-dot" aria-label="Immagine 4" aria-selected="false"></button>
+            <button type="button" class="exp-gallery-dot" aria-label="Immagine 5" aria-selected="false"></button>
           </div>
         </div>
+
+        <!-- Bullets -->
         <div class="exp-bullets">
           <div class="exp-item">
             <div class="exp-bullet-icon">💡</div>
@@ -305,37 +380,6 @@
     </div>
   </section>
 
-  <!-- ========== PHILOSOPHY ========== -->
-  <section id="philosophy" class="philosophy section-light">
-    <div class="container philosophy-container">
-      <span class="section-tag" data-i18n="philTag">I Nostri Valori</span>
-      <h2 class="section-title dark" data-i18n="philTitle">La Nostra Filosofia</h2>
-      <p class="section-intro dark-text" data-i18n="philIntro">
-        Crediamo nel lavoro reale e pratico, non solo teoria. L'esperienza si acquisisce sul campo e le sfide sono parte del nostro sviluppo quotidiano.
-      </p>
-      <div class="philosophy-grid">
-        <div class="phil-card">
-          <div class="phil-number">01</div>
-          <div class="phil-icon">💡</div>
-          <h3 data-i18n="phil1Title">Lavoro Reale &amp; Pratico</h3>
-          <p data-i18n="phil1Desc">Crediamo nel lavoro reale e pratico, non solo teoria.</p>
-        </div>
-        <div class="phil-card">
-          <div class="phil-number">02</div>
-          <div class="phil-icon">⚙️</div>
-          <h3 data-i18n="phil2Title">Esperienza sul Campo</h3>
-          <p data-i18n="phil2Desc">L'esperienza si acquisisce sul campo — le sfide sono parte della nostra crescita.</p>
-        </div>
-        <div class="phil-card">
-          <div class="phil-number">03</div>
-          <div class="phil-icon">🛡️</div>
-          <h3 data-i18n="phil3Title">Integrità &amp; Qualità</h3>
-          <p data-i18n="phil3Desc">Correttezza, giustizia e qualità come base di ogni nostra decisione.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== INNOVATION ========== -->
   <section class="innovation section-navy">
     <div class="container innovation-container">
@@ -347,16 +391,6 @@
           <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat1">Soluzioni affidabili a lungo termine</span></div>
           <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat2">Tecnologie collaudate sul campo</span></div>
           <div class="inno-feat"><span class="feat-dot"></span><span data-i18n="innoFeat3">Standard europei di produzione</span></div>
-        </div>
-      </div>
-      <div class="innovation-image">
-        <div class="img-placeholder dark-placeholder image-slot">
-          <div class="slot-fallback">
-            <span class="placeholder-label">📷 Innovazione — nome file</span>
-            <code class="placeholder-filename">Images/innovation.jpg</code>
-            <span class="placeholder-hint">Tecnologia, qualità o processi (sezione blu scuro).</span>
-          </div>
-          <img class="slot-img" src="Images/innovation.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
         </div>
       </div>
     </div>
@@ -376,14 +410,14 @@
             <div class="contact-icon">📍</div>
             <div>
               <strong data-i18n="contactLocationLabel">Sede</strong>
-              <p>Albania</p>
+              <p data-i18n="contactLocationValue">Shkodër, Albania</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📞</div>
             <div>
               <strong data-i18n="contactPhoneLabel">Telefono</strong>
-              <p>+355 XX XXX XXXX</p>
+              <p><a href="tel:+355692074118" class="contact-phone-link" data-i18n="contactPhoneValue">069 20 74 118</a></p>
             </div>
           </div>
           <div class="contact-item">
@@ -431,13 +465,10 @@
     </div>
     <div class="map-embed-wrapper">
       <!--
-        ┌─────────────────────────────────────────────────────────┐
-        │  COME INSERIRE LA MAPPA / HOW TO INSERT THE MAP         │
-        │  1. Vai su Google Maps e cerca la tua posizione         │
-        │  2. Clicca "Condividi" → "Incorpora una mappa"          │
-        │  3. Copia l'URL dal tag src="..."                       │
-        │  4. Incollalo nell'attributo data-map-src qui sotto     │
-        └─────────────────────────────────────────────────────────┘
+        1. Vai su Google Maps e cerca la tua posizione
+        2. Condividi → "Incorpora una mappa"
+        3. Copia l'URL dal tag src="..."
+        4. Incollalo nell'attributo data-map-src qui sotto
       -->
       <iframe
         data-map-src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1122.2517498487814!2d19.523115121493717!3d42.06790025288928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDA0JzA0LjMiTiAxOcKwMzEnMjUuMCJF!5e0!3m2!1sen!2s!4v1773326570304!5m2!1sen!2s"
@@ -479,7 +510,6 @@
           <li><a href="#about"      data-i18n="navAbout">Chi Siamo</a></li>
           <li><a href="#services"   data-i18n="navServices">Servizi</a></li>
           <li><a href="#experience" data-i18n="navExperience">Esperienza</a></li>
-          <li><a href="#philosophy" data-i18n="navPhilosophy">Filosofia</a></li>
           <li><a href="#contact"    data-i18n="navContact">Contatti</a></li>
         </ul>
       </div>

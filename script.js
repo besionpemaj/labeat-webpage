@@ -14,7 +14,6 @@ const translations = {
     navAbout:       'Chi Siamo',
     navServices:    'Servizi',
     navExperience:  'Esperienza',
-    navPhilosophy:  'Filosofia',
     navContact:     'Contatti',
 
     heroEyebrow:  'Dal 1996',
@@ -36,11 +35,6 @@ const translations = {
     servicesTag:   'Cosa Facciamo',
     servicesTitle: 'Esperti in Assemblaggio<br/>Cavi Elettrici',
     servicesIntro: 'Dal 2019, BATA è specializzata nel montaggio e collegamento di cavi elettrici per elettrodomestici e industria. Lavoriamo con tutti i tipi di cavi, dai più complessi ai più semplici.',
-    service1Title: 'Assemblaggio Cavi',
-    service1Desc:  'Montaggio professionale, connessioni precise e installazione affidabile.',
-    service2Title: 'Soluzioni Cablaggio',
-    service2Desc:  'Soluzioni di cablaggio per produzione, costruzione e connessione industriale.',
-    service3Title: 'Produzione Industriale',
 
     expTag:   'Il Nostro Percorso',
     expTitle: 'Esperienza &amp; Collaborazione<br/>Internazionale',
@@ -59,15 +53,21 @@ const translations = {
     statMarket:  'Mercato EU',
     statWorkers: 'Lavoratori',
 
-    philTag:   'I Nostri Valori',
-    philTitle: 'La Nostra Filosofia',
-    philIntro: 'Crediamo nel lavoro reale e pratico, non solo teoria. L\'esperienza si acquisisce sul campo e le sfide sono parte del nostro sviluppo quotidiano.',
-    phil1Title: 'Lavoro Reale & Pratico',
-    phil1Desc:  'Crediamo nel lavoro reale e pratico, non solo teoria.',
-    phil2Title: 'Esperienza sul Campo',
-    phil2Desc:  'L\'esperienza si acquisisce sul campo — le sfide sono parte della nostra crescita.',
-    phil3Title: 'Integrità & Qualità',
-    phil3Desc:  'Correttezza, giustizia e qualità come base di ogni nostra decisione.',
+    procTag:   'Produzione',
+    procTitle: 'Processi operativi',
+    procIntro: 'Le lavorazioni che eseguiamo quotidianamente sui cablaggi, dalla lettura degli schemi al collaudo finale.',
+    proc1Title: 'Montaggio e collegamento secondo schemi elettrici',
+    proc1Desc:  'Realizziamo cablaggi seguendo documentazione tecnica, schemi e specifiche del cliente, così ogni connessione corrisponde al progetto approvato.',
+    proc2Title: 'Fastonature singola, doppia e varianti',
+    proc2Desc:  'Applicazione di terminali faston maschio e femmina, configurazioni singole o doppie e soluzioni equivalenti richieste dalla commessa.',
+    proc3Title: 'Saldatura',
+    proc3Desc:  'Giunzioni a filo e a stagno su conduttori e componenti, con controlli visivi per solidità meccanica e continuità elettrica.',
+    proc4Title: 'Twistimi',
+    proc4Desc:  'Formazione di terminali twist per connessioni affidabili su più conduttori, in conformità alle istruzioni di montaggio.',
+    proc5Title: 'Collaudo e controllo qualità',
+    proc5Desc:  'Verifiche elettriche, prove di continuità e controlli dimensionali prima della spedizione, secondo gli standard concordati.',
+    proc6Title: 'Lavorazioni cavi flat',
+    proc6Desc:  'Taglio, preparazione e completamento di cavi piatti (flat) per display, flat-flex e applicazioni con ingombro ridotto.',
 
     innoTag:   'Il Nostro Approccio',
     innoTitle: 'Innovazione &amp;<br/>Affidabilità',
@@ -80,7 +80,9 @@ const translations = {
     contactTitle:         'Contatta <span class="gold-text">BATA</span>',
     contactIntro:         'Siamo aperti alla collaborazione. Contattateci per qualsiasi esigenza o partnership.',
     contactLocationLabel: 'Sede',
+    contactLocationValue: 'Shkodër, Albania',
     contactPhoneLabel:    'Telefono',
+    contactPhoneValue:    '069 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Richiedi Partnership',
 
@@ -111,7 +113,6 @@ const translations = {
     navAbout:       'About',
     navServices:    'Services',
     navExperience:  'Experience',
-    navPhilosophy:  'Philosophy',
     navContact:     'Contact',
 
     heroEyebrow:  'Since 1996',
@@ -133,11 +134,6 @@ const translations = {
     servicesTag:   'What We Do',
     servicesTitle: 'Electrical Cable Assembly<br/>Experts',
     servicesIntro: 'Since 2019, BATA has specialized in the assembly and connection of electrical cables for household appliances and industry. We work with all types of cables, from the most complex to the simplest.',
-    service1Title: 'Cable Assembly',
-    service1Desc:  'Professional assembly, precise connections and reliable installation.',
-    service2Title: 'Wiring Solutions',
-    service2Desc:  'Wiring solutions for production, construction and industrial connection.',
-    service3Title: 'Industrial Production',
 
     expTag:   'Track Record',
     expTitle: 'Experience &amp; International<br/>Collaboration',
@@ -156,15 +152,21 @@ const translations = {
     statMarket:  'EU Market',
     statWorkers: 'Workers',
 
-    philTag:   'Our Values',
-    philTitle: 'Our Philosophy',
-    philIntro: 'We believe in real and practical work, not just theory. Experience is gained in the field and challenges are part of our daily development.',
-    phil1Title: 'Real & Practical Work',
-    phil1Desc:  'We believe in real and practical work, not just theory.',
-    phil2Title: 'Field Experience',
-    phil2Desc:  'Experience is gained in the field — challenges are part of our growth.',
-    phil3Title: 'Integrity & Quality',
-    phil3Desc:  'Correctness, fairness and quality as the basis of every decision.',
+    procTag:   'Production',
+    procTitle: 'Operational processes',
+    procIntro: 'The work we perform daily on harnesses, from reading electrical diagrams to final testing.',
+    proc1Title: 'Assembly and connection to electrical diagrams',
+    proc1Desc:  'We build harnesses following technical documentation, diagrams and client specifications so every connection matches the approved design.',
+    proc2Title: 'Single, double Faston terminals and variants',
+    proc2Desc:  'Application of male and female Faston terminals, single or double configurations and equivalent solutions required by the job.',
+    proc3Title: 'Soldering',
+    proc3Desc:  'Wire and solder joints on conductors and components, with visual checks for mechanical strength and electrical continuity.',
+    proc4Title: 'Twist terminals',
+    proc4Desc:  'Twist-type terminations for reliable multi-conductor connections, in line with assembly instructions.',
+    proc5Title: 'Testing and quality control',
+    proc5Desc:  'Electrical checks, continuity tests and dimensional inspection before shipment, according to agreed standards.',
+    proc6Title: 'Flat cable processing',
+    proc6Desc:  'Cutting, preparation and finishing of flat cables for displays, flex-flat and space-critical applications.',
 
     innoTag:   'Our Approach',
     innoTitle: 'Innovation &amp;<br/>Reliability',
@@ -177,7 +179,9 @@ const translations = {
     contactTitle:         'Contact <span class="gold-text">BATA</span>',
     contactIntro:         'We are open to collaboration. Contact us for any need or partnership.',
     contactLocationLabel: 'Location',
+    contactLocationValue: 'Shkodër, Albania',
     contactPhoneLabel:    'Phone',
+    contactPhoneValue:    '069 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Request Partnership',
 
@@ -208,44 +212,38 @@ const translations = {
     navAbout:       'Rreth Nesh',
     navServices:    'Shërbime',
     navExperience:  'Përvojë',
-    navPhilosophy:  'Filozofi',
     navContact:     'Kontakt',
 
     heroEyebrow:  'Që nga viti 1996',
     heroSubtitle: 'Montim Kabllosh Elektrike & Zgjidhje Kabllimi',
-    heroTagline:  'Montim profesional i kabllove elektrike për partnerë evropianë.',
+    heroTagline:  'Montim profesional i kabllove elektrike për partnerë europianë.',
     heroCTA:      'Mëso Më Shumë',
 
     aboutTag:    'Kush Jemi',
     aboutTitle:  'Rreth BATA',
-    aboutP1:     'BATA operon që nga viti 1996 me kompani të tregut të Bashkimit Evropian. Kompania përfaqëson profesionalizëm, dinamizëm dhe përkushtim për të përmbushur nevojat e klientëve.',
-    aboutP2:     'Sot kompania ka staf profesionist që punon me parime: korrektësi, drejtësi dhe cilësi.',
+    aboutP1:     'BATA operon që nga viti 1996 me kompani të ndryshme në tregun e Bashkimit Europian.',
+    aboutP2:     'Kompania karakterizohet nga profesionalizmi, dinamizmi, dhe përkushtimi në përmbushjen e nevojave të klientëve.',
     value1Title: 'Profesionalizëm',
     value1Desc:  'Standarde të larta dhe ekip i kualifikuar.',
     value2Title: 'Dinamizëm',
-    value2Desc:  'Adaptim i shpejtë ndaj nevojave të tregut.',
+    value2Desc:  'Përshtatje e shpejtë me nevojat e tregut.',
     value3Title: 'Përkushtim',
     value3Desc:  'Përgjigje e saktë ndaj kërkesave të klientit.',
 
     servicesTag:   'Çfarë Bëjmë',
     servicesTitle: 'Ekspertë në Montimin<br/>e Kabllove Elektrike',
-    servicesIntro: 'Që nga viti 2019, BATA është e specializuar në montimin dhe lidhjen e kabllove elektrike për pajisje shtëpiake dhe industri. Punojmë me të gjitha llojet e kabllove, nga më komplekset te më të thjeshtat.',
-    service1Title: 'Montim Kabllosh',
-    service1Desc:  'Montim profesional, lidhje të sakta dhe instalim të besueshëm.',
-    service2Title: 'Zgjidhje Kabllimi',
-    service2Desc:  'Zgjidhje kabllimi për prodhim, ndërtim dhe konneksion industrial.',
-    service3Title: 'Prodhim Industrial',
+    servicesIntro: 'Që nga viti 2019, BATA është e specializuar në montimin dhe lidhjen e kabllove elektrike për pajisje shtëpiake dhe industri. Punojmë të gjitha llojet e kabllove elektrike, që përdoren për pajisje shtëpiake dhe në industri.',
 
     expTag:   'Rrugëtimi Ynë',
     expTitle: 'Përvojë &amp; Bashkëpunim<br/>Ndërkombëtar',
     expIntro: 'BATA është ndërtuar mbi punë dhe përvojë shumëvjeçare, e forcuar nga bashkëpunimi me kompani italiane dhe europiane në sektorin e instalimeve elektrike.',
-    exp1Title: '30+ Vjet Përvojë',
+    exp1Title: '30+ vjet përvojë',
     exp1Desc:  'Themeluar në 1996, BATA ka akumuluar njohuri të thella në sektorin elektrik.',
-    exp2Title: 'Partnerë në Tregun Europian',
-    exp2Desc:  'Bashkëpunim i ngushtë me kompani italiane dhe europiane nga vitet e para.',
-    exp3Title: 'Specialistë Që nga 2019',
-    exp3Desc:  'Specializim të thellë në montimin e kabllove elektrike për industri dhe shtëpi.',
-    exp4Title: 'Garanci Cilësie',
+    exp2Title: 'Partnerë në tregun europian',
+    exp2Desc:  'Bashkëpunim i ngushtë me kompani italiane dhe europiane që nga vitet e para.',
+    exp3Title: 'Specialistë që nga 2019',
+    exp3Desc:  'Specialistë në montimin e kabllove elektrike në fusha të ndryshme të industrisë.',
+    exp4Title: 'Garanci në cilësi',
     exp4Desc:  'Çdo produkt i kontrolluar sipas standardeve europiane të cilësisë.',
 
     statFounded: 'Themelimi',
@@ -253,19 +251,25 @@ const translations = {
     statMarket:  'Tregu EU',
     statWorkers: 'Punëtorë',
 
-    philTag:   'Vlerat Tona',
-    philTitle: 'Filozofia Jonë',
-    philIntro: 'Ne besojmë në punë reale dhe praktike, jo vetëm teori. Përvoja fitohet në terren dhe sfidat janë pjesë e zhvillimit tonë të përditshëm.',
-    phil1Title: 'Punë Reale & Praktike',
-    phil1Desc:  'Ne besojmë në punë reale dhe praktike, jo vetëm teori.',
-    phil2Title: 'Përvojë në Terren',
-    phil2Desc:  'Përvoja fitohet në terren — sfidat janë pjesë e rritjes sonë.',
-    phil3Title: 'Integritet & Cilësi',
-    phil3Desc:  'Korrektësi, drejtësi dhe cilësi si baza e çdo vendimi tonë.',
+    procTag:   'Prodhimi',
+    procTitle: 'Proceset operative',
+    procIntro: 'Punët që kryejmë çdo ditë në kabllot, nga leximi i skemave deri te testimi përfundimtar.',
+    proc1Title: 'Montim dhe lidhje sipas skemave elektrike',
+    proc1Desc:  'Montojmë kabllot duke ndjekur dokumentacionin teknik, skemat dhe specifikimet e klientit, që çdo lidhje të përputhet me projektin e miratuar.',
+    proc2Title: 'Fastonime njëfishe, dyshe dhe variante',
+    proc2Desc:  'Aplikim i terminaleve faston mashkull dhe femër, konfigurime njëfishe ose dyshe dhe zgjidhje ekuivalente sipas porosisë.',
+    proc3Title: 'Saldim (lodhje me kalaj dhe me tel)',
+    proc3Desc:  'Bashkime të salduara në tel dhe me kalaj mbi përcjellës dhe komponentë, me kontrolle vizuale për forcë mekanike dhe vazhdimësi elektrike.',
+    proc4Title: 'Twist (terminalë të rrotulluar)',
+    proc4Desc:  'Formim i terminaleve twist për lidhje të besueshme me shumë përcjellës, në përputhje me udhëzimet e montimit.',
+    proc5Title: 'Testim dhe kontroll cilësie',
+    proc5Desc:  'Kontrolle elektrike, teste vazhdimësie dhe matje dimensionale para dërgimit, sipas standardeve të rënë dakord.',
+    proc6Title: 'Punime kabllo FLAT',
+    proc6Desc:  'Përgatitje dhe përfundim i kabllove të sheshtë për ekrane, flat-flex dhe aplikime me hapësirë të kufizuar.',
 
     innoTag:   'Qasja Jonë',
     innoTitle: 'Inovacion &amp;<br/>Besueshmëri',
-    innoDesc:  'Për ne inovacioni do të thotë besueshmëri, qëndrueshmëri dhe zgjidhje praktike për klientët. Nuk ndjekim trendet — ne ndërtojmë zgjidhje afatgjata dhe të besueshme.',
+    innoDesc:  'Për ne inovacioni do të thotë besueshmëri, qëndrueshmëri dhe zgjidhje praktike për klientët. Ne nuk ndjekim trendet, por ndërtojmë zgjidhje afatgjata dhe të besueshme.',
     innoFeat1: 'Zgjidhje të besueshme afatgjata',
     innoFeat2: 'Teknologji të provuara në terren',
     innoFeat3: 'Standarde europiane të prodhimit',
@@ -274,7 +278,9 @@ const translations = {
     contactTitle:         'Kontakto <span class="gold-text">BATA</span>',
     contactIntro:         'Jemi të hapur për bashkëpunim. Na kontaktoni për çdo nevojë ose partneritet.',
     contactLocationLabel: 'Vendndodhja',
+    contactLocationValue: 'Shkodër, Shqipëri',
     contactPhoneLabel:    'Telefon',
+    contactPhoneValue:    '069 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Kërko Partneritet',
 
@@ -443,10 +449,10 @@ const revealObserver = new IntersectionObserver(
 [
   '.about-text', '.about-image',
   '.service-card',
-  '.exp-image-slot', '.exp-bullets', '.exp-item',
+  '.exp-gallery', '.exp-bullets', '.exp-item',
   '.stat',
-  '.phil-card',
-  '.innovation-text', '.innovation-image',
+  '.process-card',
+  '.innovation-text',
   '.contact-info', '.contact-form',
   '.map-header',
 ].forEach(selector => {
@@ -458,6 +464,75 @@ const revealObserver = new IntersectionObserver(
     revealObserver.observe(el);
   });
 });
+
+/* ============================================================
+   FADE GALLERIES (Chi Siamo + Esperienza)
+   ============================================================ */
+(function initFadeGalleries() {
+  const AUTO_MS = 4500;
+  const pauseFns = [];
+  const resumeFns = [];
+
+  document.querySelectorAll('.exp-gallery').forEach((gallery) => {
+    const slides  = Array.from(gallery.querySelectorAll('.exp-gallery-slide'));
+    const dots    = Array.from(gallery.querySelectorAll('.exp-gallery-dot'));
+    const prevBtn = gallery.querySelector('.exp-gallery-btn--prev');
+    const nextBtn = gallery.querySelector('.exp-gallery-btn--next');
+    if (!slides.length) return;
+
+    let idx   = 0;
+    let timer = null;
+
+    function goTo(i) {
+      slides[idx].classList.remove('exp-gallery-slide--active');
+      dots[idx]?.classList.remove('exp-gallery-dot--active');
+      dots[idx]?.setAttribute('aria-selected', 'false');
+
+      idx = ((i % slides.length) + slides.length) % slides.length;
+
+      slides[idx].classList.add('exp-gallery-slide--active');
+      dots[idx]?.classList.add('exp-gallery-dot--active');
+      dots[idx]?.setAttribute('aria-selected', 'true');
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(idx + 1), AUTO_MS);
+    }
+
+    function stopAuto() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    prevBtn?.addEventListener('click', () => { goTo(idx - 1); startAuto(); });
+    nextBtn?.addEventListener('click', () => { goTo(idx + 1); startAuto(); });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { goTo(i); startAuto(); });
+    });
+
+    gallery.addEventListener('mouseenter', stopAuto);
+    gallery.addEventListener('mouseleave', startAuto);
+
+    gallery.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(idx - 1); startAuto(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(idx + 1); startAuto(); }
+    });
+
+    pauseFns.push(stopAuto);
+    resumeFns.push(startAuto);
+    startAuto();
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      resumeFns.forEach((fn) => fn());
+    } else {
+      pauseFns.forEach((fn) => fn());
+    }
+  });
+})();
 
 /* ============================================================
    CONTACT FORM
