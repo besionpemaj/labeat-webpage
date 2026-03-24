@@ -128,12 +128,11 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #8899AA;
+  border: none;
   position: relative;
 }
 .dark-placeholder {
   background: linear-gradient(135deg, #2A3F5A 0%, #1A2E45 100%);
-  border-color: #4A6080;
 }
 .placeholder-label {
   font-size: 0.85rem;
@@ -142,6 +141,57 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.05em;
 }
 .dark-placeholder .placeholder-label { color: #8AAEC8; }
+
+/* Image slots: add/rename files under Images/ to match src; on error the fallback shows */
+.image-slot { position: relative; overflow: hidden; }
+.image-slot > .slot-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  pointer-events: none;
+}
+.image-slot > .slot-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+.placeholder-filename {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2D3748;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 6px 12px;
+  border-radius: 6px;
+  max-width: 100%;
+  word-break: break-all;
+}
+.dark-placeholder .placeholder-filename,
+.hero-image-placeholder .placeholder-filename {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.25);
+}
+.placeholder-hint {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #5A6B7D;
+  max-width: 280px;
+  line-height: 1.4;
+}
+.dark-placeholder .placeholder-hint,
+.hero-image-placeholder .placeholder-hint {
+  color: rgba(255, 255, 255, 0.55);
+}
 
 /* ============================================================
    NAVBAR
@@ -545,7 +595,25 @@ img { display: block; max-width: 100%; }
   text-align: left;
   margin-bottom: 60px;
 }
-.exp-image .img-placeholder { min-height: 420px; }
+/* Esperienza: griglia 2×2 (4 foto) */
+.exp-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  min-height: 420px;
+  align-items: stretch;
+}
+.exp-image-slot {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.exp-image-slot .img-placeholder {
+  flex: 1;
+  min-height: calc((420px - 14px) / 2);
+  border-radius: var(--radius-lg);
+}
 .exp-bullets { display: flex; flex-direction: column; gap: 28px; }
 .exp-item {
   display: flex;
@@ -947,7 +1015,13 @@ img { display: block; max-width: 100%; }
 
   .about-image { order: -1; }
   .about-image .img-placeholder { min-height: 260px; }
-  .exp-image .img-placeholder   { min-height: 260px; }
+  .exp-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, auto));
+    min-height: 0;
+    gap: 12px;
+  }
+  .exp-image-slot .img-placeholder { min-height: 160px; }
   .innovation-image .img-placeholder { min-height: 260px; }
 
   .philosophy-grid { grid-template-columns: 1fr; }

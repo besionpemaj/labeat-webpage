@@ -443,7 +443,7 @@ const revealObserver = new IntersectionObserver(
 [
   '.about-text', '.about-image',
   '.service-card',
-  '.exp-image', '.exp-bullets', '.exp-item',
+  '.exp-image-slot', '.exp-bullets', '.exp-item',
   '.stat',
   '.phil-card',
   '.innovation-text', '.innovation-image',

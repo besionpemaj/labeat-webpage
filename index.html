@@ -4,12 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BATA sh.p.k – Assemblaggio Cavi Elettrici & Soluzioni Cablaggio</title>
+  <!-- Favicon: vedi tabella commenti sotto <body> — file atteso: Images/favicon.png -->
+  <link rel="icon" href="Images/favicon.png" type="image/png" sizes="32x32"/>
+  <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" sizes="180x180"/>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 </head>
 <body>
+
+  <!--
+    IMMAGINI / IMAGE FILES (cartella: Images/)
+    Rinomina o copia i tuoi file con questi nomi per farli apparire al posto giusto:
+
+    | Posizione sulla pagina      | Nome file da usare              |
+    |-----------------------------|----------------------------------|
+    | Sfondo hero (full screen)   | Images/hero-background.jpg      |
+    | Sezione Chi Siamo (destra)  | Images/about.jpg                |
+    | Card Servizi (immagine)     | Images/services-industrial.jpg   |
+    | Esperienza — griglia 2×2, slot 1 (alto sx)  | Images/experience-1.jpg |
+    | Esperienza — slot 2 (alto dx)               | Images/experience-2.jpg |
+    | Esperienza — slot 3 (basso sx)              | Images/experience-3.jpg |
+    | Esperienza — slot 4 (basso dx)             | Images/experience-4.jpg |
+    | Sezione Innovazione (destra)| Images/innovation.jpg           |
+
+    | Favicon (scheda browser)    | Images/favicon.png              |  (32×32 o 48×48 px, PNG)
+    | Icona iOS “Aggiungi a Home” | Images/apple-touch-icon.png    |  (180×180 px, opzionale)
+
+    Formati: .jpg, .jpeg o .png — se usi un’estensione diversa, cambia anche l’attributo src nel HTML.
+    Per il favicon: se usi solo .ico, imposta href="Images/favicon.ico" e type="image/x-icon" nel <head>.
+  -->
 
   <!-- ========== NAVBAR ========== -->
   <header id="navbar">
@@ -67,8 +92,13 @@
 
   <!-- ========== HERO ========== -->
   <section id="home" class="hero">
-    <div class="hero-image-placeholder">
-      <span class="placeholder-label">📷 Industrial / Cable Photo</span>
+    <div class="hero-image-placeholder image-slot">
+      <div class="slot-fallback">
+        <span class="placeholder-label">📷 Hero — nome file</span>
+        <code class="placeholder-filename">Images/hero-background.jpg</code>
+        <span class="placeholder-hint">Sfondo a tutta larghezza sopra il titolo (industria / cavi).</span>
+      </div>
+      <img class="slot-img" src="Images/hero-background.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -117,8 +147,13 @@
           </div>
         </div>
         <div class="about-image">
-          <div class="img-placeholder">
-            <span class="placeholder-label">📷 Factory / Staff Photo</span>
+          <div class="img-placeholder image-slot">
+            <div class="slot-fallback">
+              <span class="placeholder-label">📷 Chi Siamo — nome file</span>
+              <code class="placeholder-filename">Images/about.jpg</code>
+              <span class="placeholder-hint">Fabbrica, team o sede accanto al testo About.</span>
+            </div>
+            <img class="slot-img" src="Images/about.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
           </div>
         </div>
       </div>
@@ -145,8 +180,13 @@
           <p data-i18n="service2Desc">Soluzioni di cablaggio per produzione, costruzione e connessione industriale.</p>
         </div>
         <div class="service-card service-card-image">
-          <div class="img-placeholder dark-placeholder">
-            <span class="placeholder-label">📷 Industrial Production Photo</span>
+          <div class="img-placeholder dark-placeholder image-slot">
+            <div class="slot-fallback">
+              <span class="placeholder-label">📷 Servizi — nome file</span>
+              <code class="placeholder-filename">Images/services-industrial.jpg</code>
+              <span class="placeholder-hint">Produzione / cablaggio per la card con overlay.</span>
+            </div>
+            <img class="slot-img" src="Images/services-industrial.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
           </div>
           <div class="service-card-overlay">
             <div class="service-icon">🏭</div>
@@ -166,9 +206,46 @@
         BATA è costruita su anni di lavoro ed esperienza, rafforzata dalla collaborazione con aziende italiane ed europee nel settore degli impianti elettrici.
       </p>
       <div class="experience-grid">
-        <div class="exp-image">
-          <div class="img-placeholder">
-            <span class="placeholder-label">📷 Workshop / Team Photo</span>
+        <div class="exp-images" aria-label="Galleria esperienza">
+          <div class="exp-image-slot">
+            <div class="img-placeholder image-slot">
+              <div class="slot-fallback">
+                <span class="placeholder-label">📷 Esperienza 1</span>
+                <code class="placeholder-filename">Images/experience-1.jpg</code>
+                <span class="placeholder-hint">In alto a sinistra.</span>
+              </div>
+              <img class="slot-img" src="Images/experience-1.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            </div>
+          </div>
+          <div class="exp-image-slot">
+            <div class="img-placeholder image-slot">
+              <div class="slot-fallback">
+                <span class="placeholder-label">📷 Esperienza 2</span>
+                <code class="placeholder-filename">Images/experience-2.jpg</code>
+                <span class="placeholder-hint">In alto a destra.</span>
+              </div>
+              <img class="slot-img" src="Images/experience-2.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            </div>
+          </div>
+          <div class="exp-image-slot">
+            <div class="img-placeholder image-slot">
+              <div class="slot-fallback">
+                <span class="placeholder-label">📷 Esperienza 3</span>
+                <code class="placeholder-filename">Images/experience-3.jpg</code>
+                <span class="placeholder-hint">In basso a sinistra.</span>
+              </div>
+              <img class="slot-img" src="Images/experience-3.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            </div>
+          </div>
+          <div class="exp-image-slot">
+            <div class="img-placeholder image-slot">
+              <div class="slot-fallback">
+                <span class="placeholder-label">📷 Esperienza 4</span>
+                <code class="placeholder-filename">Images/experience-4.jpg</code>
+                <span class="placeholder-hint">In basso a destra.</span>
+              </div>
+              <img class="slot-img" src="Images/experience-4.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
+            </div>
           </div>
         </div>
         <div class="exp-bullets">
@@ -273,8 +350,13 @@
         </div>
       </div>
       <div class="innovation-image">
-        <div class="img-placeholder dark-placeholder">
-          <span class="placeholder-label">📷 Innovation / Tech Photo</span>
+        <div class="img-placeholder dark-placeholder image-slot">
+          <div class="slot-fallback">
+            <span class="placeholder-label">📷 Innovazione — nome file</span>
+            <code class="placeholder-filename">Images/innovation.jpg</code>
+            <span class="placeholder-hint">Tecnologia, qualità o processi (sezione blu scuro).</span>
+          </div>
+          <img class="slot-img" src="Images/innovation.jpg" alt="" decoding="async" onerror="this.style.display='none'"/>
         </div>
       </div>
     </div>
