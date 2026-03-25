@@ -82,7 +82,7 @@ const translations = {
     contactLocationLabel: 'Sede',
     contactLocationValue: 'Shkodër, Albania',
     contactPhoneLabel:    'Telefono',
-    contactPhoneValue:    '069 20 74 118',
+    contactPhoneValue:    '00 355 69 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Richiedi Partnership',
 
@@ -182,7 +182,7 @@ const translations = {
     contactLocationLabel: 'Location',
     contactLocationValue: 'Shkodër, Albania',
     contactPhoneLabel:    'Phone',
-    contactPhoneValue:    '069 20 74 118',
+    contactPhoneValue:    '00 355 69 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Request Partnership',
 
@@ -282,7 +282,7 @@ const translations = {
     contactLocationLabel: 'Vendndodhja',
     contactLocationValue: 'Shkodër, Shqipëri',
     contactPhoneLabel:    'Telefon',
-    contactPhoneValue:    '069 20 74 118',
+    contactPhoneValue:    '00 355 69 20 74 118',
     contactEmailLabel:    'Email',
     contactCTA:           'Kërko Partneritet',
 
@@ -629,15 +629,12 @@ const counterObserver = new IntersectionObserver(
 document.querySelectorAll('.stat-number').forEach(c => counterObserver.observe(c));
 
 /* ============================================================
-   GOOGLE MAPS — auto-load if data-map-src is filled in
+   GOOGLE MAPS — set src from data-map-src if embed URL is kept off src (optional)
    ============================================================ */
-const mapIframe  = document.querySelector('.map-iframe');
-const mapOverlay = document.getElementById('mapOverlay');
-
+const mapIframe = document.querySelector('.map-iframe');
 if (mapIframe) {
-  const realSrc = mapIframe.getAttribute('data-map-src') || '';
-  if (realSrc && realSrc !== 'YOUR_GOOGLE_MAPS_EMBED_URL_HERE' && realSrc.startsWith('http')) {
-    mapIframe.src = realSrc;
-    if (mapOverlay) mapOverlay.style.display = 'none';
+  const dataSrc = mapIframe.getAttribute('data-map-src') || '';
+  if (dataSrc && dataSrc !== 'YOUR_GOOGLE_MAPS_EMBED_URL_HERE' && dataSrc.startsWith('http')) {
+    mapIframe.src = dataSrc;
   }
 }
