@@ -482,7 +482,6 @@ img { display: block; max-width: 100%; }
   font-size: 0.97rem;
 }
 .value-cards { margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
-html[lang="sq"] .value-cards .value-card:nth-child(2) { display: none; }
 .value-card {
   display: flex;
   align-items: flex-start;
